@@ -7,7 +7,8 @@
 }
 \arguments{
   \item{parms}{vector. 3 parameters for fitting (C1, C2,
-  Offset)}
+  Offset). C1 is the intercept, C2 is the slope, and the
+  Offset allows the zero point to not be at \code{(0,0)}.}
 
   \item{optim}{bernoulli. If \code{TRUE}, only the sum of
   squares is returned}
@@ -27,7 +28,8 @@
   squares.
 }
 \description{
-  Euler-Bernoulli bending with 3 parameters
+  Euler-Bernoulli bending with 3 parameters. EI is allowed
+  to vary linearly along the length of the beam.
 }
 \author{
   Kevin Middleton

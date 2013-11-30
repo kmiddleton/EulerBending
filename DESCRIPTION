@@ -14,5 +14,6 @@ Depends:
 Version: 0.0.1
 Date: 2013-11-29
 Collate:
-    'Bending_Optimization_Functions.R'
     'datasets.R'
+    'bending_fit_2.R'
+    'bending_fit_3.R'

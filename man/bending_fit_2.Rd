@@ -7,7 +7,8 @@
 }
 \arguments{
   \item{parms}{vector. 2 parameters for fitting (C1,
-  Offset)}
+  Offset). C1 is the intercept for EI, and the Offset
+  allows the zero point to not be at \code{(0,0)}.}
 
   \item{optim}{bernoulli. If \code{TRUE}, only the sum of
   squares is returned}
@@ -27,7 +28,8 @@
   squares.
 }
 \description{
-  Euler-Bernoulli bending with 2 parameters
+  Euler-Bernoulli bending with 2 parameters. EI is constant
+  along the length of the beam.
 }
 \author{
   Kevin Middleton
