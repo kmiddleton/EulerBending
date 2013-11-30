@@ -10,7 +10,9 @@ Description: Estimate flexural stiffness via Euler-Bernoulli beam
     bending theory
 Depends:
     R (>= 3.0),
-    dfoptim
+    dfoptim,
+    ggplot2,
+    gridExtra
 Version: 0.0.1
 Date: 2013-11-29
 Collate:
