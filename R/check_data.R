@@ -2,19 +2,23 @@ check_data <- function(data){
   dat <- data
   cols <- names(dat)
   
-  flag <- TRUE
-  
   if (!("x" %in% cols)){
     stop("data must have a column 'x'.")
-    flag <- FALSE
   }
   if (!("u" %in% cols)){
     stop("data must have a column 'u'.")
-    flag <- FALSE
   }
   if (!("P" %in% cols)){
     stop("data must have a column 'P'.")
-    flag <- FALSE
   }
-  return(flag)
+  
+  if (!("u_P" %in% cols)){
+    dat$u_P <- (dat$u / dat$P)
+  }
+  
+  if (sum(dat$u >= 0)){
+    stop("'u' should be negative.")
+  }
+  
+  return(dat)
 }

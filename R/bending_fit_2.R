@@ -19,8 +19,7 @@
 bending_fit_2 <- function(parms, optim = TRUE, n = 1000,
                           beam_length,
                           data){
-  dat <- data
-  check_data(dat)
+  dat <- check_data(data)
   
   # Set up constants
   if (length(parms) != 2){
