@@ -17,3 +17,4 @@ Collate:
     'datasets.R'
     'bending_fit_2.R'
     'bending_fit_3.R'
+    'check_data.R'

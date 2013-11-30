@@ -12,7 +12,8 @@
 ##' @param beam_length integer. Beam length in m.
 ##' @param data data.frame. Observed data.
 ##' @return If \code{optim = FALSE}, a list containing the theoretical
-##'   bone, the observed data, and the sum of squares.
+##'   bone (\code{test_mat}), the observed data (\code{dat}), and the
+##'   sum of squares (\code{value}).
 ##' @author Kevin Middleton
 ##' @export
 ##' 
@@ -20,6 +21,7 @@ bending_fit_3 <- function(parms, optim = TRUE, n = 1000,
                           beam_length,
                           data){
   dat <- data
+  check_data(dat)
   
   # Set up constants
   if (length(parms) != 3){

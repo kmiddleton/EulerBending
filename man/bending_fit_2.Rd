@@ -22,8 +22,8 @@
 }
 \value{
   If \code{optim = FALSE}, a list containing the
-  theoretical bone, the observed data, and the sum of
-  squares.
+  theoretical bone (\code{test_mat}), the observed data
+  (\code{dat}), and the sum of squares (\code{value}).
 }
 \description{
   Euler-Bernoulli bending with 2 parameters. EI is constant
