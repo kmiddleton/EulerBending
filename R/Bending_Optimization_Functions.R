@@ -1,5 +1,8 @@
 bending_fit_3 <- function(parms, optim = TRUE, n = 1000,
-                          scale_pix, beam_length){
+                          scale_pix, beam_length,
+                          data){
+  dat <- data
+  
   # Set up constants
   if (length(parms) != 3){
     stop("Must supply 3 parameters.")
@@ -70,7 +73,10 @@ bending_fit_3 <- function(parms, optim = TRUE, n = 1000,
 }
 
 bending_fit_2 <- function(parms, optim = TRUE, n = 1000,
-                          scale_pix, beam_length){
+                          scale_pix, beam_length,
+                          data){
+  dat <- data
+  
   # Set up constants
   if (length(parms) != 2){
     stop("Must supply 2 parameters.")
