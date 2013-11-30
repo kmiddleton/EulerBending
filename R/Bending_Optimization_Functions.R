@@ -1,3 +1,19 @@
+##' Euler-Bernoulli bending with 3 parameters
+##'
+##' @title Euler-Bernoulli bending with 3 parameters
+##' @param parms vector. 3 parameters for fitting (C1, C2, Offset)
+##' @param optim bernoulli. If \code{TRUE}, only the sum of squares is
+##'   returned
+##' @param n integer. Number of divisions for the theoretical beam.
+##'   Defaults to 1000.
+##' @param scale_pix integer. Pixels per cm.
+##' @param beam_length integer. Beam length in m.
+##' @param data data.frame. Observed data.
+##' @return If \code{optim = FALSE}, a list containing the theoretical
+##'   bone, the observed data, and the sum of squares.
+##' @author Kevin Middleton
+##' @export
+##' 
 bending_fit_3 <- function(parms, optim = TRUE, n = 1000,
                           scale_pix, beam_length,
                           data){
@@ -72,6 +88,21 @@ bending_fit_3 <- function(parms, optim = TRUE, n = 1000,
   }
 }
 
+##' Euler-Bernoulli bending with 2 parameters
+##'
+##' @title Euler-Bernoulli bending with 2 parameters
+##' @param parms vector. 2 parameters for fitting (C1, Offset)
+##' @param optim bernoulli. If \code{TRUE}, only the sum of squares is
+##'   returned
+##' @param n integer. Number of divisions for the theoretical beam.
+##'   Defaults to 1000.
+##' @param scale_pix integer. Pixels per cm.
+##' @param beam_length integer. Beam length in m.
+##' @param data data.frame. Observed data.
+##' @return If \code{optim = FALSE}, a list containing the theoretical
+##'   bone, the observed data, and the sum of squares.
+##' @author Kevin Middleton
+##' @export
 bending_fit_2 <- function(parms, optim = TRUE, n = 1000,
                           scale_pix, beam_length,
                           data){
@@ -140,4 +171,3 @@ bending_fit_2 <- function(parms, optim = TRUE, n = 1000,
                 ss = ss))
   }
 }
-

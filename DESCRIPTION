@@ -1,0 +1,18 @@
+Package: EulerBending
+Maintainer: Kevin Middleton <middletonk@missouri.edu>
+License: file LICENSE
+Title: Euler-Bernoulli Bending
+LazyData: yes
+Type: Package
+LazyLoad: yes
+Author: Kevin Middleton
+Description: Estimate flexural stiffness via Euler-Bernoulli beam
+    bending theory
+Depends:
+    R (>= 3.0),
+    dfoptim
+Version: 0.0.1
+Date: 2013-11-29
+Collate:
+    'Bending_Optimization_Functions.R'
+    'datasets.R'
