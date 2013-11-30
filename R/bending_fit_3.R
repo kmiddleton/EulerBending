@@ -9,7 +9,6 @@
 ##'   returned
 ##' @param n integer. Number of divisions for the theoretical beam.
 ##'   Defaults to 1000.
-##' @param scale_pix integer. Pixels per cm.
 ##' @param beam_length integer. Beam length in m.
 ##' @param data data.frame. Observed data.
 ##' @return If \code{optim = FALSE}, a list containing the theoretical
@@ -18,7 +17,7 @@
 ##' @export
 ##' 
 bending_fit_3 <- function(parms, optim = TRUE, n = 1000,
-                          scale_pix, beam_length,
+                          beam_length,
                           data){
   dat <- data
   
