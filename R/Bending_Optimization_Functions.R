@@ -1,4 +1,5 @@
-bending_fit_3 <- function(parms, optim = TRUE, n = 1000){
+bending_fit_3 <- function(parms, optim = TRUE, n = 1000,
+                          scale_pix, beam_length){
   # Set up constants
   if (length(parms) != 3){
     stop("Must supply 3 parameters.")
@@ -14,7 +15,7 @@ bending_fit_3 <- function(parms, optim = TRUE, n = 1000){
   
   # Set up x's
   index <- 0:n
-  x <- index * (bone_length / n)
+  x <- index * (beam_length / n)
   
   # Calculate EI
   C1_comp <- rep(C1, length(x))
@@ -26,7 +27,7 @@ bending_fit_3 <- function(parms, optim = TRUE, n = 1000){
   EI <- C1_comp + C2_comp
   
   # Calculate u''/P
-  upp_P <- (x - bone_length) / EI
+  upp_P <- (x - beam_length) / EI
   
   # Calcuate u'/P
   up_P <- rep(0, length(x))
@@ -68,7 +69,8 @@ bending_fit_3 <- function(parms, optim = TRUE, n = 1000){
   }
 }
 
-bending_fit_2 <- function(parms, optim = TRUE, n = 1000){
+bending_fit_2 <- function(parms, optim = TRUE, n = 1000,
+                          scale_pix, beam_length){
   # Set up constants
   if (length(parms) != 2){
     stop("Must supply 2 parameters.")
@@ -83,7 +85,7 @@ bending_fit_2 <- function(parms, optim = TRUE, n = 1000){
   
   # Set up x's
   index <- 0:n
-  x <- index * (bone_length / n)
+  x <- index * (beam_length / n)
   
   # Calculate EI
   C1_comp <- rep(C1, length(x))
@@ -91,7 +93,7 @@ bending_fit_2 <- function(parms, optim = TRUE, n = 1000){
   EI <- C1_comp + C2_comp
   
   # Calculate u''/P
-  upp_P <- (x - bone_length) / EI
+  upp_P <- (x - beam_length) / EI
   
   # Calcuate u'/P
   up_P <- rep(0, length(x))
