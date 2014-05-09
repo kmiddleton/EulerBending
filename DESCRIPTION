@@ -15,8 +15,3 @@ Depends:
     gridExtra
 Version: 0.0.1
 Date: 2013-11-29
-Collate:
-    'datasets.R'
-    'bending_fit_2.R'
-    'bending_fit_3.R'
-    'check_data.R'
